@@ -1,0 +1,84 @@
+/* ---------------------------------------------------------
+   2. Footer Styles
+   ---------------------------------------------------------*/
+
+#footer{
+	@extend %clearfix;
+	font-size: 17px;
+	line-height: 23px;
+	text-transform: uppercase;
+	color:$dove-gray;
+	text-align: center;
+	border-top: 1px solid $tapa;
+	padding-top: 20px;	
+	padding-bottom: 38px;
+	@include media('>=tablet'){
+		font-size: 18px;
+		line-height: 26px;
+		padding-top: 38px;	
+		padding-bottom: 38px;
+	}
+	@include media('>=desktop'){
+		padding-bottom: 80px;
+		font-size: 24px;
+		line-height: 30px;
+	}
+	@include media('>=1140px'){padding-bottom: 180px;}
+	p{margin:0;}
+	a{
+		color:$dove-gray;
+		text-decoration: none;
+		transition:all .25s linear;
+		&:hover{color:$ronchi;}
+	}
+}
+/* social network styles */
+.social-networks{
+	@extend %listreset;
+	font-size: 27px;
+	line-height: 31px;
+	margin:0 0 5px;
+	@include media('>=tablet'){
+		font-size: 22px;
+		line-height: 30px;
+		margin:0 0 20px;
+	}
+	@include media('>=desktop'){
+		font-size: 33px;
+		line-height: 37px;
+		margin:0 0 35px;
+	}
+	li{
+		margin:0 8px;
+		display: inline-block;
+		vertical-align: top;
+		@include media('>=tablet'){margin:0 5px;}
+		a{
+			color:$dove-gray;
+			text-decoration: none;
+			transition:all .25s linear;
+			overflow: hidden;
+			text-indent: 101%;
+			white-space: nowrap;
+			display: block;
+			position: relative;	
+			width: 30px;
+			height: 30px;
+			@include media('>=tablet'){
+				width: 23px;
+				height: 30px;
+			}
+			@include media('>=desktop'){
+				width: 37px;
+				height: 37px;
+			}
+			&:hover{color:$ronchi;}
+			.icon{
+				position: relative;
+				left: -30px;
+				@include media('>=tablet'){left: -23px;}
+				@include media('>=desktop'){left: -37px;}
+			}
+		}
+	}
+}
